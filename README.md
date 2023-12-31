@@ -1,2 +1,2 @@
-# new-repo
-Creation of a repository for the All in Afrika program
+## All in Africa
+Creation of a repository for the All in Africa program
