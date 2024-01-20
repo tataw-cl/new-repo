@@ -1,5 +1,5 @@
 //Q1
-#include<cstring>
+#include<string>
 #include<iostream>
 class Departments
 {
@@ -27,3 +27,48 @@ int main(){
     d1.display();
     return 0;
 }
+
+//Q2
+class Students{
+private:
+//student ID as a string
+std:: string id;
+//first name as a string
+std:: string firstname;
+//class year as an int
+int year;
+//major as a string
+std:: string major;
+
+public:
+//default constructor
+Students(){
+    id="00000000";
+    firstname="Null";
+    year=0;
+    major="Null";};
+
+    //"get" function to access all private data members
+ void get(){
+    id;
+    firstname;
+    year;
+    major;
+ };
+
+//display function to display all private data members
+void display(){
+    std:: cout <<"ID:" <<id << std::endl;
+    std:: cout <<"First Name:" <<firstname << std::endl;
+    std:: cout <<"Year:" << year << std::endl;
+    std:: cout <<"Major:" << major << std::endl;
+};
+
+//constructor with parameters
+Students(std::string ID, std:: string name, int A_year, std::string Degree_m){
+    id=ID;
+    firstname=name;
+    year=A_year;
+    major=Degree_m;
+};
+};
