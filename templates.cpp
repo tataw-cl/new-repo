@@ -61,3 +61,25 @@ int main(){
     }
     return 0;
 }
+
+/*//new template function
+
+template <typename T>
+void swap_values(T& a, T& b){
+    T temp;
+    temp=a;
+    a=b;
+    b=temp;
+
+    int main(){
+        int num1=5;
+        int num2=10;
+        std::cout << "Before swapping: " << std::endl;
+        std::cout << "num1: " << num1 << std::endl;
+        std::cout << "num2: " << num2 << std::endl;
+        swap_values(num1, num2);
+        std::cout << "After swapping: " << std::endl;
+        std::cout << "num1: " << num1 << std::endl;
+        std::cout << "num2: " << num2 << std::endl;
+        return 0;
+    }*/
