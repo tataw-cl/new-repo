@@ -1,6 +1,7 @@
-//Q1
+/*//Q1
 #include<string>
 #include<iostream>
+#include<cstring>
 class Departments
 {
 private:
@@ -22,7 +23,7 @@ Departments(char initTitle[],int initCode){
     }
 };
 
-int main(){
+/*int main(){
     Departments d1("CSC", 305);
     d1.display();
     return 0;
@@ -72,3 +73,62 @@ Students(std::string ID, std:: string name, int A_year, std::string Degree_m){
     major=Degree_m;
 };
 };
+
+int main(){
+    Students s1("12345678", "John", 3, "CSC");
+    s1.display();
+    return 0;
+}*/
+
+//Q3
+
+
+#include<iostream>
+using namespace std;
+class Human{
+public:
+void virtual HMemory(){
+    cout << "I can easily learn my lessons"<<endl;};
+    void HDisk(){
+        cout << "I can keep new lessons in my memory"<<endl;
+    };
+    void HErased(){
+        cout << "I can forget my lessons"<<endl;
+    };
+    void ThisExam(){HErased(); HMemory();};
+virtual ~Human(){}
+};
+
+class student: public Human{
+    public:
+    void HMemory(){
+        cout << "Powerfull"<<endl;
+    };
+    void HDisk(){
+        cout << "Can hybernate"<<endl;
+    };
+    void HErased(){
+        cout << "Rubbed out"<<endl;
+    };
+};
+
+int main(){
+    cout << "********************"<<endl;
+    Human* He=new student;
+    He->HMemory();
+    He->HDisk();
+    He->ThisExam();
+    cout<<"   "<<endl;
+    cout<<"*****************"<<endl;
+    Human She =*(new student);
+    She.HMemory();
+    She.HDisk();
+    She.ThisExam();
+    cout<<"   "<<endl;
+    cout<<"*****************"<<endl;
+    student You;
+    You.HMemory();
+    You.HDisk();
+    You.ThisExam();
+    return 0;
+}
